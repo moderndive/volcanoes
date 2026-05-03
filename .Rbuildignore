@@ -1,0 +1,13 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^data-raw$
+^LICENSE\.md$
+^README\.Rmd$
+^\.github$
+^\.gitignore$
+^\.positai$
+^\.claude$
+hex*
+^_pkgdown\.yml$
+^pkgdown$
+^docs$

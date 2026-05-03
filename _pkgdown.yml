@@ -1,0 +1,47 @@
+url: https://moderndive.github.io/volcanoes/
+
+template:
+  bootstrap: 5
+  light-switch: false
+  bslib:
+    primary: "#ff6b1a"
+    secondary: "#c9421e"
+    success: "#ffcc33"
+    info: "#7a4ea8"
+    bg: "#0a0a14"
+    fg: "#f5f0e8"
+    base_font: {google: "Inter"}
+    heading_font: {google: "Bebas Neue"}
+    code_font: {google: "JetBrains Mono"}
+
+home:
+  title: volcanoes
+  description: >
+    Tidy snapshots of the Smithsonian Institution Global Volcanism Program's
+    Volcanoes of the World database — Holocene volcanoes, eruptions, and
+    eruption events.
+  links:
+  - text: Global Volcanism Program
+    href: https://volcano.si.edu/
+  - text: TidyTuesday 2020-05-12 layout
+    href: https://github.com/rfordatascience/tidytuesday/tree/main/data/2020/2020-05-12
+
+navbar:
+  bg: dark
+  structure:
+    left:  [intro, reference, articles, news]
+    right: [search, github]
+
+reference:
+- title: Datasets
+  desc: >
+    Three nested tibbles. Join `volcanoes` -> `eruptions` on `volcano_number`,
+    and `eruptions` -> `events` on `eruption_number`.
+  contents:
+  - volcanoes
+  - eruptions
+  - events
+
+- title: Package
+  contents:
+  - volcanoes-package

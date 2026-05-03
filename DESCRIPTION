@@ -1,0 +1,33 @@
+Package: volcanoes
+Title: Holocene Volcanoes, Eruptions, and Eruption Events
+Version: 0.1.0
+Authors@R:
+    person("Chester", "Ismay", , "chester.ismay@gmail.com", role = c("aut", "cre"))
+Description: Tidy snapshots of the Smithsonian Institution Global Volcanism
+    Program's Volcanoes of the World database. Provides three data frames
+    covering Holocene volcanoes, their eruptions, and the events recorded
+    during those eruptions. The schema follows the layout popularized by the
+    rfordatascience/tidytuesday 2020-05-12 release, refreshed against the
+    current Global Volcanism Program database.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 3.5)
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+URL: https://moderndive.github.io/volcanoes/,
+    https://github.com/moderndive/volcanoes,
+    https://volcano.si.edu/
+BugReports: https://github.com/moderndive/volcanoes/issues
+Suggests:
+    chromote,
+    dplyr,
+    fs,
+    janitor,
+    pkgdown,
+    purrr,
+    readr,
+    rvest,
+    tibble,
+    usethis

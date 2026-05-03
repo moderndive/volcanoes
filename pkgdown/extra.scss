@@ -1,0 +1,139 @@
+// Volcanoes pkgdown theme — palette pulled from the hex sticker:
+// charcoal night sky, lava orange, ember red, magma yellow.
+
+$lava-orange:   #ff6b1a;
+$ember-red:     #c9421e;
+$magma-yellow:  #ffcc33;
+$twilight:      #7a4ea8;
+$night:         #0a0a14;
+$night-2:       #14141f;
+$night-3:       #1f1f2e;
+$cream:         #f5f0e8;
+$cream-muted:   #c9c2b5;
+
+// ---- base surface ---------------------------------------------------------
+body {
+  background:
+    radial-gradient(circle at 20% 0%, rgba($ember-red, 0.18), transparent 55%),
+    radial-gradient(circle at 80% 100%, rgba($twilight, 0.22), transparent 60%),
+    $night;
+  color: $cream;
+}
+
+// ---- navbar ---------------------------------------------------------------
+.navbar.bg-dark {
+  background-color: rgba($night, 0.92) !important;
+  border-bottom: 1px solid rgba($lava-orange, 0.35);
+  backdrop-filter: blur(6px);
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: $cream !important;
+  letter-spacing: 0.02em;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: $magma-yellow !important;
+}
+
+// ---- headings -------------------------------------------------------------
+h1, h2, h3, h4, h5, h6,
+.template-home h1, .template-reference-index h1 {
+  color: $magma-yellow;
+  letter-spacing: 0.04em;
+}
+h1 { font-size: 3rem; }
+h2 { border-bottom: 1px solid rgba($lava-orange, 0.4); padding-bottom: 0.3rem; }
+
+// ---- links ----------------------------------------------------------------
+a, a:visited {
+  color: $lava-orange;
+  text-decoration: none;
+}
+a:hover {
+  color: $magma-yellow;
+  text-decoration: underline;
+}
+
+// ---- code -----------------------------------------------------------------
+pre, code, kbd, samp {
+  background: $night-2;
+  color: $cream;
+  border-radius: 4px;
+}
+pre {
+  border: 1px solid rgba($lava-orange, 0.25);
+  padding: 0.9rem 1rem;
+}
+code {
+  padding: 0.1rem 0.35rem;
+  color: $magma-yellow;
+}
+pre code {
+  color: $cream;
+  background: transparent;
+  padding: 0;
+}
+
+// Syntax highlighting (rmarkdown / pkgdown defaults)
+.fl, .dv { color: $magma-yellow; }    // numbers
+.st { color: lighten($lava-orange, 15%); }  // strings
+.kw { color: $magma-yellow; font-weight: 600; }    // keywords
+.fu { color: $lava-orange; }          // functions
+.co { color: $cream-muted; font-style: italic; } // comments
+
+// ---- tables ---------------------------------------------------------------
+table {
+  background: $night-2;
+  color: $cream;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+th {
+  background: rgba($ember-red, 0.4);
+  color: $cream;
+}
+tbody tr:nth-child(odd) td {
+  background: rgba($night-3, 0.6);
+}
+td, th {
+  border-color: rgba($lava-orange, 0.2) !important;
+}
+
+// ---- cards / sidebars -----------------------------------------------------
+.card, .well, .sidebar, aside {
+  background: rgba($night-2, 0.75);
+  border: 1px solid rgba($lava-orange, 0.25);
+}
+.sidebar h2 { font-size: 1.1rem; }
+
+// ---- buttons --------------------------------------------------------------
+.btn-primary {
+  background: $lava-orange;
+  border-color: $ember-red;
+}
+.btn-primary:hover {
+  background: $magma-yellow;
+  border-color: $lava-orange;
+  color: $night;
+}
+
+// ---- footer ---------------------------------------------------------------
+footer, .pkgdown-footer {
+  border-top: 1px solid rgba($lava-orange, 0.3);
+  color: $cream-muted;
+}
+
+// ---- home logo ------------------------------------------------------------
+.template-home .row > .col-md-9 h1 { display: none; } // hide title; logo carries it
+img.logo, .pkg-logo {
+  filter: drop-shadow(0 0 16px rgba($lava-orange, 0.4));
+}
+
+// ---- search ---------------------------------------------------------------
+input.form-control {
+  background: $night-3;
+  color: $cream;
+  border-color: rgba($lava-orange, 0.4);
+}
+input.form-control::placeholder { color: $cream-muted; }
