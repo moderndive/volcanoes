@@ -21,7 +21,6 @@ URL: https://moderndive.github.io/volcanoes/,
     https://volcano.si.edu/
 BugReports: https://github.com/moderndive/volcanoes/issues
 Suggests:
-    chromote,
     dplyr,
     fs,
     janitor,

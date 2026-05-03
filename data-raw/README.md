@@ -27,8 +27,14 @@ That runs three scripts in sequence and writes `.rda` files to `data/`.
 The events scraper drives a real browser:
 
 1. Install Google Chrome or Chromium (macOS: `brew install --cask google-chrome`).
-2. `install.packages(c("chromote", "rvest", "purrr", "fs", "janitor", "usethis"))`.
+2. `install.packages(c("chromote", "rvest", "dplyr", "tibble", "purrr", "readr", "fs", "janitor", "usethis"))`.
 3. Run `chromote::find_chrome()` and confirm it returns a path.
+
+`chromote` is intentionally **not** declared in `DESCRIPTION` Suggests:
+its `Google Chrome` system requirement is mapped by `pkgdepends` to the
+`ppa:xtradeb/apps` PPA, which times out from the GitHub Actions runner
+and breaks the pkgdown build. The rest of the data-raw stack is in
+Suggests so package maintainers get them automatically.
 
 If you need to start the events scrape from scratch, delete
 `data-raw/cache/events/` first. Otherwise the scraper resumes from wherever
