@@ -1,6 +1,6 @@
-# volcanoes <a href="https://moderndive.github.io/volcanoes/"><img src="man/figures/logo.png" align="right" height="138" alt="volcanoes hex logo" /></a>
+# volcanoes <a href="https://moderndive.github.io/volcanoes/"><img src="man/figures/logo.gif" align="right" height="138" alt="volcanoes hex logo" /></a>
 
-An R data package wrapping a current snapshot of the Smithsonian Institution
+An R data package wrapping a current (as of 2026-05-03) snapshot of the Smithsonian Institution
 [Global Volcanism Program](https://volcano.si.edu/) Volcanoes of the World
 database. The schema follows the layout popularized by the
 [rfordatascience/tidytuesday 2020-05-12](https://github.com/rfordatascience/tidytuesday/tree/main/data/2020/2020-05-12)

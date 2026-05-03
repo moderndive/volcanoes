@@ -56,31 +56,53 @@ a:hover {
 }
 
 // ---- code -----------------------------------------------------------------
-pre, code, kbd, samp {
-  background: $night-2;
-  color: $cream;
+// Background, font, and most colors are set via bslib variables in
+// _pkgdown.yml (code-bg, pre-bg, code-color, pre-color). These rules add
+// extras: borders, .sourceCode wrappers, and the per-token overrides below.
+$code-bg-rgb: rgba(255,255,255,0.04);
+
+div.sourceCode,
+.sourceCode {
+  background: #2a2a3d !important;
+  color: $cream !important;
   border-radius: 4px;
 }
 pre {
-  border: 1px solid rgba($lava-orange, 0.25);
+  border: 1px solid rgba($lava-orange, 0.3);
   padding: 0.9rem 1rem;
 }
-code {
-  padding: 0.1rem 0.35rem;
-  color: $magma-yellow;
-}
-pre code {
+pre,
+pre code,
+pre code *,
+.sourceCode,
+.sourceCode pre,
+.sourceCode pre code,
+.sourceCode pre code * {
+  // Force bright cream for unhighlighted tokens; highlight classes below
+  // win on per-token specificity.
   color: $cream;
-  background: transparent;
-  padding: 0;
+}
+.sourceCode pre,
+.sourceCode pre code {
+  background: transparent !important;
+}
+// Inline `code` (single backticks) inside body text
+:not(pre) > code {
+  color: $magma-yellow;
+  padding: 0.1rem 0.35rem;
 }
 
-// Syntax highlighting (rmarkdown / pkgdown defaults)
-.fl, .dv { color: $magma-yellow; }    // numbers
-.st { color: lighten($lava-orange, 15%); }  // strings
-.kw { color: $magma-yellow; font-weight: 600; }    // keywords
-.fu { color: $lava-orange; }          // functions
-.co { color: $cream-muted; font-style: italic; } // comments
+// Syntax highlighting (pandoc / pkgdown skylighting classes)
+.kw, .cf { color: lighten($magma-yellow, 5%); font-weight: 600; } // keywords / control flow
+.fu      { color: lighten($lava-orange, 12%); }                    // function calls
+.dt      { color: lighten($twilight, 25%); }                       // data types
+.dv, .fl, .bn, .cn { color: $magma-yellow; }                       // numbers, constants
+.st, .ch { color: #ffb88c; }                                       // strings, chars
+.co, .cv, .do { color: #aaa49a; font-style: italic; }              // comments
+.op, .ot { color: lighten($cream, 0%); }                           // operators (=, <-)
+.va      { color: $cream; }                                        // variables
+.at      { color: lighten($twilight, 30%); }                       // attributes
+.er, .wa { color: #ff7a7a; }                                       // errors, warnings
 
 // ---- tables ---------------------------------------------------------------
 table {
@@ -124,10 +146,21 @@ footer, .pkgdown-footer {
   color: $cream-muted;
 }
 
-// ---- home logo ------------------------------------------------------------
-.template-home .row > .col-md-9 h1 { display: none; } // hide title; logo carries it
-img.logo, .pkg-logo {
+// ---- logo (use animated gif everywhere) -----------------------------------
+// The navbar <img> src points at logo.png (pkgdown only auto-discovers
+// png/svg). A small JS snippet in _pkgdown.yml > template.includes.after_body
+// swaps the src to logo.gif on every page after load. We just style the
+// displayed image here.
+img.logo, .pkg-logo, .navbar-logo {
   filter: drop-shadow(0 0 16px rgba($lava-orange, 0.4));
+}
+
+// Home page header logo — pkgdown's default size is small; bump it.
+.page-header img.logo {
+  height: 220px;
+  width: auto;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 // ---- search ---------------------------------------------------------------

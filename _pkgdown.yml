@@ -3,6 +3,9 @@ url: https://moderndive.github.io/volcanoes/
 template:
   bootstrap: 5
   light-switch: false
+  # Dark syntax-highlighting theme — pkgdown's "arrow" default is light;
+  # arrow-dark is its built-in dark variant and integrates with bslib.
+  theme: arrow-dark
   bslib:
     primary: "#ff6b1a"
     secondary: "#c9421e"
@@ -10,6 +13,13 @@ template:
     info: "#7a4ea8"
     bg: "#0a0a14"
     fg: "#f5f0e8"
+    # Code: lighter charcoal background so cream text reads clearly. These
+    # bslib variables propagate through every Bootstrap rule that styles code.
+    code-bg: "#2a2a3d"
+    code-color: "#ffcc33"
+    pre-bg: "#2a2a3d"
+    pre-color: "#f5f0e8"
+    pre-border-color: "#ff6b1a"
     base_font: {google: "Inter"}
     heading_font: {google: "Bebas Neue"}
     code_font: {google: "JetBrains Mono"}
