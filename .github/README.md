@@ -1,4 +1,4 @@
-# volcanoes <a href="https://moderndive.github.io/volcanoes/"><img src="man/figures/logo.png" align="right" height="138" alt="volcanoes hex logo" /></a>
+# volcanoes <a href="https://moderndive.github.io/volcanoes/"><img src="https://raw.githubusercontent.com/moderndive/volcanoes/main/hex.gif" align="right" height="138" alt="volcanoes hex logo" /></a>
 
 An R data package wrapping a current (as of 2026-05-03) snapshot of the Smithsonian Institution
 [Global Volcanism Program](https://volcano.si.edu/) Volcanoes of the World
@@ -52,7 +52,7 @@ source("data-raw/build.R")
 in seconds. `events` is scraped from per-volcano pages via headless Chromium
 (`chromote`) and takes about an hour the first time; subsequent runs reuse a
 local cache in `data-raw/cache/events/`. See
-[`data-raw/README.md`](data-raw/README.md) for setup details and the
+[`data-raw/README.md`](../data-raw/README.md) for setup details and the
 politeness expectations.
 
 ## Data source and license
@@ -66,4 +66,4 @@ downstream work — for example:
 > Institution. <https://doi.org/10.5479/si.GVP.VOTW5-2024.5.1>
 
 The package code and the curated tibbles as distributed here are MIT
-licensed; see [`LICENSE.md`](LICENSE.md).
+licensed; see [`../LICENSE.md`](../LICENSE.md).
