@@ -1,6 +1,6 @@
 Package: volcanoes
 Title: Holocene Volcanoes, Eruptions, and Eruption Events
-Version: 0.1.0
+Version: 0.1.1
 Authors@R:
     person("Chester", "Ismay", , "chester.ismay@gmail.com", role = c("aut", "cre"))
 Description: Tidy snapshots of the Smithsonian Institution Global Volcanism

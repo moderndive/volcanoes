@@ -11,8 +11,9 @@ A tibble with one row per volcano. Columns include:
 \item{volcano_name}{Character. Volcano name.}
 \item{primary_volcano_type}{Character. Morphological classification
 (e.g. stratovolcano, shield, caldera).}
-\item{last_eruption_year}{Character. Year of the most recently confirmed
-eruption, or \code{"Unknown"} for volcanoes with only undated activity.}
+\item{last_eruption_year}{Numeric. Year of the most recently confirmed
+eruption (negative values are BCE years), or \code{NA} for volcanoes with
+only undated activity.}
 \item{country}{Character. Country containing the volcano.}
 \item{region}{Character. GVP geographic region.}
 \item{subregion}{Character. GVP geographic subregion.}

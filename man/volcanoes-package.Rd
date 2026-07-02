@@ -5,12 +5,17 @@
 \alias{volcanoes-package}
 \title{volcanoes: Holocene Volcanoes, Eruptions, and Eruption Events}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Tidy snapshots of the Smithsonian Institution Global Volcanism Program's Volcanoes of the World database. Provides three data frames covering Holocene volcanoes, their eruptions, and the events recorded during those eruptions. The schema follows the layout popularized by the rfordatascience/tidytuesday 2020-05-12 release, refreshed against the current Global Volcanism Program database.
 }
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://moderndive.github.io/volcanoes/}
+  \item \url{https://github.com/moderndive/volcanoes}
   \item \url{https://volcano.si.edu/}
+  \item Report bugs at \url{https://github.com/moderndive/volcanoes/issues}
 }
 
 }
