@@ -11,7 +11,13 @@ current Global Volcanism Program database.
 
 Useful links:
 
+- <https://moderndive.github.io/volcanoes/>
+
+- <https://github.com/moderndive/volcanoes>
+
 - <https://volcano.si.edu/>
+
+- Report bugs at <https://github.com/moderndive/volcanoes/issues>
 
 ## Author
 

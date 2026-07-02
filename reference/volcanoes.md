@@ -29,8 +29,8 @@ A tibble with one row per volcano. Columns include:
 
 - last_eruption_year:
 
-  Character. Year of the most recently confirmed eruption, or
-  `"Unknown"` for volcanoes with only undated activity.
+  Numeric. Year of the most recently confirmed eruption (negative values
+  are BCE years), or `NA` for volcanoes with only undated activity.
 
 - country:
 

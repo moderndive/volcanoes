@@ -1,5 +1,12 @@
 # Changelog
 
+## volcanoes 0.1.1
+
+- Fix stale documentation for `last_eruption_year`: the column is
+  **numeric** (negative values are BCE years) with `NA` for volcanoes
+  with only undated activity — not character with “Unknown” as
+  previously documented.
+
 ## volcanoes 0.1.0
 
 - Initial CRAN release.
