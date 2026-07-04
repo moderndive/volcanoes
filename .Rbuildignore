@@ -11,3 +11,5 @@ hex*
 ^_pkgdown\.yml$
 ^pkgdown$
 ^docs$
+^cran-comments\.md$
+^CRAN-SUBMISSION$
