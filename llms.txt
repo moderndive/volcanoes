@@ -68,9 +68,9 @@ Program, and are subject to GVP’s [terms of
 use](https://volcano.si.edu/gvp_terms.cfm). Cite GVP in any downstream
 work — for example:
 
-> Global Volcanism Program. *Volcanoes of the World* (v. 5.x.x).
+> Global Volcanism Program. *Volcanoes of the World* (v. 5.2.x).
 > Smithsonian Institution.
-> <https://doi.org/10.5479/si.GVP.VOTW5-2024.5.1>
+> <https://doi.org/10.5479/si.GVP.VOTW5-2024.5.2>
 
 The package code and the curated tibbles as distributed here are MIT
 licensed; see
