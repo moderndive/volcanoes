@@ -10,6 +10,15 @@ release, refreshed against the latest GVP database version.
 
 ## Installation
 
+Install the released version from CRAN:
+
+``` r
+
+install.packages("volcanoes")
+```
+
+Or the development version from GitHub:
+
 ``` r
 
 # install.packages("pak")
