@@ -67,7 +67,7 @@ source("data-raw/build.R")
 refresh in seconds. `events` is scraped from per-volcano pages via
 headless Chromium (`chromote`) and takes about an hour the first time;
 subsequent runs reuse a local cache in `data-raw/cache/events/`. See
-[`data-raw/README.md`](https://moderndive.github.io/volcanoes/data-raw/README.md)
+[`data-raw/README.md`](https://github.com/moderndive/volcanoes/blob/main/data-raw/README.md)
 for setup details and the politeness expectations.
 
 ## Data source and license
@@ -83,7 +83,7 @@ work — for example:
 
 The package code and the curated tibbles as distributed here are MIT
 licensed; see
-[`LICENSE.md`](https://moderndive.github.io/volcanoes/LICENSE.md).
+[`LICENSE.md`](https://github.com/moderndive/volcanoes/blob/main/LICENSE.md).
 
 # Package index
 

@@ -127,7 +127,7 @@
 <p>GVP publishes a new database version roughly every month. To rebuild the package’s <code>.rda</code> files against the current release:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span><span class="st">"data-raw/build.R"</span><span class="op">)</span></span></code></pre></div>
-<p><code>volcanoes</code> and <code>eruptions</code> are pulled from GVP’s WFS endpoint and refresh in seconds. <code>events</code> is scraped from per-volcano pages via headless Chromium (<code>chromote</code>) and takes about an hour the first time; subsequent runs reuse a local cache in <code>data-raw/cache/events/</code>. See <a href="data-raw/README.html"><code>data-raw/README.md</code></a> for setup details and the politeness expectations.</p>
+<p><code>volcanoes</code> and <code>eruptions</code> are pulled from GVP’s WFS endpoint and refresh in seconds. <code>events</code> is scraped from per-volcano pages via headless Chromium (<code>chromote</code>) and takes about an hour the first time; subsequent runs reuse a local cache in <code>data-raw/cache/events/</code>. See <a href="https://github.com/moderndive/volcanoes/blob/main/data-raw/README.md" class="external-link"><code>data-raw/README.md</code></a> for setup details and the politeness expectations.</p>
 </div>
 <div class="section level2">
 <h2 id="data-source-and-license">Data source and license<a class="anchor" aria-label="anchor" href="#data-source-and-license"></a>
@@ -136,7 +136,7 @@
 <blockquote>
 <p>Global Volcanism Program. <em>Volcanoes of the World</em> (v. 5.2.x). Smithsonian Institution. <a href="https://doi.org/10.5479/si.GVP.VOTW5-2024.5.2" class="external-link uri">https://doi.org/10.5479/si.GVP.VOTW5-2024.5.2</a></p>
 </blockquote>
-<p>The package code and the curated tibbles as distributed here are MIT licensed; see <a href="LICENSE.html"><code>LICENSE.md</code></a>.</p>
+<p>The package code and the curated tibbles as distributed here are MIT licensed; see <a href="https://github.com/moderndive/volcanoes/blob/main/LICENSE.md" class="external-link"><code>LICENSE.md</code></a>.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
