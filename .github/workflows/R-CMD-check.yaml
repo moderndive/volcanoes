@@ -1,0 +1,69 @@
+# Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
+# Runs R CMD check across Windows, macOS, and Linux (incl. R-devel and oldrel).
+# The Windows R-devel job mirrors what win-builder-devel exercises, so CRAN's
+# Windows/R-devel platform is covered here without a win-builder submission.
+# Action versions match pkgdown.yaml so the node-guard workflow stays green.
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+name: R-CMD-check.yaml
+
+permissions: read-all
+
+jobs:
+  R-CMD-check:
+    runs-on: ${{ matrix.config.os }}
+
+    name: ${{ matrix.config.os }} (${{ matrix.config.r }})
+
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - {os: windows-latest, r: 'release'}
+          - {os: windows-latest, r: 'devel',   http-user-agent: 'release'}
+          - {os: macos-latest,   r: 'release'}
+          - {os: ubuntu-latest,  r: 'devel', http-user-agent: 'release'}
+          - {os: ubuntu-latest,  r: 'release'}
+          - {os: ubuntu-latest,  r: 'oldrel-1'}
+
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      R_KEEP_PKG_SOURCE: yes
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: r-lib/actions/setup-pandoc@v2
+
+      # LaTeX so the check builds the PDF manual; win-builder caught a manual
+      # failure (native-script Rd characters) that --no-manual CI missed.
+      - uses: r-lib/actions/setup-tinytex@v2
+
+      - name: Install LaTeX packages needed for the PDF manual
+        # inconsolata: R manual code font; courier/times/helvetic: psnfss
+        # base-35 fonts Rd.sty uses (\url renders in Courier — missing
+        # courier broke pdflatex with "Font T1/pcr ... not loadable").
+        # makeindex: the indexed manual pass fails silently without it
+        # ("No file Rd2.ind"), which R reports as a PDF-manual WARNING.
+        run: tlmgr install inconsolata courier times helvetic makeindex
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: ${{ matrix.config.r }}
+          http-user-agent: ${{ matrix.config.http-user-agent }}
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::rcmdcheck
+          needs: check
+
+      - uses: r-lib/actions/check-r-package@v2
+        with:
+          upload-snapshots: true
+          args: 'c("--as-cran")'
+          build_args: 'c("--compact-vignettes=gs+qpdf")'
