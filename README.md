@@ -1,5 +1,11 @@
 # volcanoes <a href="https://moderndive.github.io/volcanoes/"><img src="man/figures/logo.png" align="right" height="138" alt="volcanoes hex logo" /></a>
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/moderndive/volcanoes/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/moderndive/volcanoes/actions/workflows/R-CMD-check.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/volcanoes)](https://CRAN.R-project.org/package=volcanoes)
+[![CRAN downloads](https://cranlogs.r-pkg.org/badges/grand-total/volcanoes)](https://CRAN.R-project.org/package=volcanoes)
+<!-- badges: end -->
+
 An R data package wrapping a current (as of 2026-05-03) snapshot of the Smithsonian Institution
 [Global Volcanism Program](https://volcano.si.edu/) Volcanoes of the World
 database. The schema follows the layout popularized by the
